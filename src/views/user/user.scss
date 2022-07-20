@@ -1,0 +1,42 @@
+$max: 15; $num:500px;
+
+@for $var from 1 through  $max {
+  @if $var%5==0{
+    .mt#{$var}{
+      margin-top: $var+px;
+    }
+    .ml#{$var}{
+      margin-left: $var+px;
+    }
+    .mr#{$var}{
+      margin-right: $var+px;
+    }
+    .mb#{$var}{
+      margin-bottom: $var+px;
+    }
+  } 
+}
+.card{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  width: 500px;
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .row{
+      height:70px;
+    }
+    .btnRow{
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+}

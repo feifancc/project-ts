@@ -1,0 +1,20 @@
+@import '~antd/dist/antd.css';
+
+$max: 15; $num:500px;
+
+@for $var from 1 through  $max {
+  @if $var%5==0{
+    .mt#{$var}{
+      margin-top: $var+px;
+    }
+    .ml#{$var}{
+      margin-left: $var+px;
+    }
+    .mr#{$var}{
+      margin-right: $var+px;
+    }
+    .mb#{$var}{
+      margin-bottom: $var+px;
+    }
+  } 
+}

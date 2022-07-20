@@ -1,0 +1,42 @@
+$max: 15; $num:500px;
+.name{
+  height: $num;
+  width: 300px;
+  background-color: rgb(245, 201, 201);
+}
+.container{
+  position: relative;
+}
+
+@for $var from 1 through  $max {
+  @if $var%5==0{
+    .mt#{$var}{
+      margin-top: $var+px;
+    }
+    .ml#{$var}{
+      margin-left: $var+px;
+    }
+    .mr#{$var}{
+      margin-right: $var+px;
+    }
+    .mb#{$var}{
+      margin-bottom: $var+px;
+    }
+  } 
+}
+#components-layout-demo-top-side .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl #components-layout-demo-top-side .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
